@@ -1,85 +1,66 @@
-<body class="parent-portfolio">
-  <aside class="site-sidebar" *ngIf="(mobile && !showMain) || !mobile">
+
+<body class="parent-portfolio" style="background-image: url('../assets/1bbf3e6555b2.jpeg');  background-attachment: fixed;" >
+  <aside class="site-sidebar">
     <div class="site-sidebar-inner h-card">
-      <a rel="me" class="person u-url">
+      <a  rel="me" class="person u-url">
         <div class="person-avatar u-photo">
-          <img src="assets/profile.jpg" alt="" class="avatar" />
+          <img src="../assets/profile.jpg" alt="" class="avatar">
         </div>
         <div class="person-content">
           <h1 class="person-title p-name">Bhumika Gaurav Bisht</h1>
-          <h2 class="person-subtitle p-job-title p-note">
-            Full-stack Software Engineer
-          </h2>
+          <h2 class="person-subtitle p-job-title p-note">Full-stack Software Engineer</h2>
         </div>
       </a>
 
       <nav class="block main-navigation">
+     
+
         <div class="navigation-extendable">
           <ul>
-            <li [ngClass]="portfolio ? 'current' : 'notselected'">
-              <a (click)="onSelect('portfolio')"
-                >Portfolio <i *ngIf="portfolio" class="fas fa-angle-right"></i>
-              </a>
-            </li>
-            <li [ngClass]="offer ? 'current' : 'notselected'">
-              <a (click)="onSelect('offer')"
-                >My offer <i *ngIf="offer" class="fas fa-angle-right"></i
-              ></a>
-            </li>
+            <li  [ngClass]="portfolio ? 'current' : 'notselected'"
+             ><a (click)=" onSelect('portfolio')">Portfolio <i   *ngIf="portfolio" class="fas fa-angle-right"></i>
+
+             </a></li>
+            <li   [ngClass]="offer ? 'current' : 'notselected'" ><a (click)=" onSelect('offer')">My offer <i   *ngIf="offer" class="fas fa-angle-right"></i></a></li>
           </ul>
           <ul>
-            <li class="notselected">
-              <a href="assets/Bhumika G.Bisht.pdf">My CV</a>
-            </li>
+           
+            <li class="notselected"><a href="../assets/Bhumika G.Bisht.pdf">My CV</a></li>
+           
           </ul>
         </div>
       </nav>
+
+
+
+  
     </div>
   </aside>
 
-  <div class="site-main" *ngIf="(mobile && showMain) || !mobile">
+  <div class="site-main">
     <div class="site-main-inner">
-      <div
-        style="display: flex; justify-content: flex-end; background-color: #fff"
-      >
-        <button *ngIf="mobile" (click)="showMain = false" class="closebutton">
-          X
-        </button>
-      </div>
-      <!-- <app-portfolio></app-portfolio> -->
-      <div *ngIf="offer">
-        <app-offer></app-offer>
-      </div>
-      <div *ngIf="portfolio">
-        <app-portfolio></app-portfolio>
-      </div>
+<!-- <app-portfolio></app-portfolio> -->
+<div *ngIf="offer">
+  <app-offer></app-offer>
+
+</div>
+<div  *ngIf="portfolio">
+  <app-portfolio></app-portfolio>
+</div>
     </div>
   </div>
 
   <!-- Google Analytics -->
   <script type="text/javascript">
     (function (i, s, o, g, r, a, m) {
-      i["GoogleAnalyticsObject"] = r;
-      (i[r] =
-        i[r] ||
-        function () {
-          (i[r].q = i[r].q || []).push(arguments);
-        }),
-        (i[r].l = 1 * new Date());
-      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(
-      window,
-      document,
-      "script",
-      "//www.google-analytics.com/analytics.js",
-      "ga"
-    );
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga("create", "UA-23318978-1", "auto");
-    ga("send", "pageview");
+    ga('create', 'UA-23318978-1', 'auto');
+    ga('send', 'pageview');
   </script>
 
   <!-- Disqus: comments count -->
@@ -88,16 +69,17 @@
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function () {
-      var s = document.createElement("script");
-      s.async = true;
-      s.type = "text/javascript";
-      s.src = "//" + disqus_shortname + ".disqus.com/count.js";
-      (
-        document.getElementsByTagName("HEAD")[0] ||
-        document.getElementsByTagName("BODY")[0]
-      ).appendChild(s);
-    })();
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
   </script>
+
+
+
 </body>
+
+
 
 <router-outlet></router-outlet>
