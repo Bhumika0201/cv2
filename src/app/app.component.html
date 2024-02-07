@@ -40,10 +40,14 @@
   <div class="site-main" *ngIf="(mobile && showMain) || !mobile">
     <div class="site-main-inner">
       <div
-        style="display: flex; justify-content: flex-end; background-color: #fff"
+        style="
+          display: flex;
+          justify-content: flex-end;
+          background-color: rgb(59, 44, 44);
+        "
       >
         <button *ngIf="mobile" (click)="showMain = false" class="closebutton">
-          X
+          &#10005;
         </button>
       </div>
       <!-- <app-portfolio></app-portfolio> -->

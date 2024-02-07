@@ -569,6 +569,8 @@ title {
   border-radius: 20px;
   z-index: 2;
   position: fixed;
+  background-color: #bb1f1e;
+  color: #fff;
 }
 @media only screen and (max-width: 600px) {
   .site-sidebar {
